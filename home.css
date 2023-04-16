@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#screen{
+    width: 100%;
+    height: 1000px;
+    border: 1px solid black;
+    background-color: rgb(15,16,20);
+}
+
+.left-bar{
+    width: 9%;
+    height: 100%;
+    border: 1px solid red;
+    background-color: rgb(15,16,20);
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    flex-direction: column;
+}
+
+.hotstar-logo{
+    width: 90%;
+    height: 17%;
+    margin-top: 5%;
+    /* border: 1px solid yellow; */
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hotstar-logo img{
+    align-self: center;
+    margin-top: -30%;  
+}
+
+.hotstar-icon{
+    width: 90%;
+    height: 55%;
+    margin-top: 30%;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.icon{
+    width: 100%;
+    height: 15%;
+    /* border: 1px solid yellow; */
+    color: white;
+    text-align: center;
+    scale: 0.8;
+}
+
+
+
