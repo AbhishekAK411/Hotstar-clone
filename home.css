@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 #screen{
@@ -14,8 +15,9 @@
 .left-bar{
     width: 9%;
     height: 100%;
+    
     /* border: 1px solid red; */
-    background-color: rgb(15,16,20);
+    /* background-color: rgb(15,16,20); */
     display: flex;
     position: fixed;
     z-index: 4;
@@ -25,14 +27,15 @@
 }
 
 .left-bar:hover{
-    width: 14%;
+    width: 20%;
     transition: 0.2s;
+    background-image: linear-gradient(to right, rgba(5,5,10,2), rgba(0, 0, 0, 0.2));
 }
 
 .hotstar-logo{
     /* width: 50%; */
     height: 10%;
-    top: 2%;
+    top: 3%;
     align-self: center;
     position: fixed;
     left: 2%;
@@ -81,6 +84,8 @@
     scale: 1.1;
     transition: 0.2s;
     margin-left: 4%;
+    filter: drop-shadow(0px 0px 2px #ffffff);
+    /* fill: #fff; */
 }
 
 .icon p{
@@ -90,13 +95,110 @@
     scale: 1.1;
     margin-left: 20%;
     font-size: 1.1em;
+    white-space: nowrap;
+    /* font-weight: bold; */
 }
 
 .icon:hover p{
     display: block;
     color: white;
     scale: 1.5;
-    filter: drop-shadow(0px 0px 2px #ffffff);
+    
+}
+
+.subscribe{
+    margin-top: 2%;
+    width: 90%;
+    height: 300px;
+    /* border: 1px solid yellow; */
+    margin-left: auto;
+    /* margin-right: auto; */
+}
+
+.endless{
+    width: 95%;
+    height: 90%;
+    /* border: 1px solid rgb(21,23,30); */
+    background-color: rgb(21,23,30);
+    border-radius: 20px;
+    display: flex;
+}
+
+.endless-image{
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+}
+
+.endless-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.subscribe-section{
+    width: 50%;
+    height: 100%;
+    border: 1px solid green;
+}
+
+.endless-entertainment{
+    width: 50%;
+    height: 55px;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.entertainment-image{
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.entertainment-image img{
+    width: 100%;
+}
+
+.entertainment-heading{
+    width: 75%;
+    height: 100%;
+    padding-top: 2%;
+    /* border: 1px solid red; */
+    color: white;
+}
+
+.entertainment-heading p{
+    color: rgb(143,152,178);
+}
+
+.endless-desc{
+    width: 85%;
+    /* border: 1px solid red; */
+    color: white;
+}
+
+.endless-button{
+    width: 45%;
+    height: 60px;
+    /* border: 1px solid red; */
+}
+
+.endless-button button{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(37,40,51);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 2px 20px rgb(0,0,0,0.5);
+}
+
+.endless-button button:hover{
+    scale: 1.1;
+    transition: 0.2s;
 }
 
 
