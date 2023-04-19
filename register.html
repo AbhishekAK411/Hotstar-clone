@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="login.css">
     <link rel="stylesheet" type="text/css" href="register.css">
 </head>
+
 <body>
     <div id="screen">
         <div class="register-container">
@@ -22,33 +24,36 @@
                     </div>
 
                     <div class="input-fields">
-                        <div class="input-group">
-                            <input required="" type="text" name="text" autocomplete="off" class="input">
-                            <label class="user-label">Username</label>
-                        </div>
+                        <form onsubmit="hotstar_register(event)">
+                            <div class="input-group">
+                                <input id="hotstarUserName" required="" type="text" name="text" autocomplete="off" class="input">
+                                <label class="user-label">Username</label>
+                            </div>
 
-                        <div class="input-group">
-                            <input required="" type="text" name="text" autocomplete="off" class="input">
-                            <label class="user-label">Enter your Email Address</label>
-                        </div>
+                            <div class="input-group">
+                                <input id="hotstarUserEmail" required="" type="text" name="text" autocomplete="off" class="input">
+                                <label class="user-label">Enter your Email Address</label>
+                            </div>
 
-                        <div class="input-group">
-                            <input required="" type="password" name="text" autocomplete="off" class="input">
-                            <label class="user-label">Password</label>
-                        </div>
+                            <div class="input-group">
+                                <input id="hotstarUserPassword" required="" type="password" name="text" autocomplete="off" class="input">
+                                <label class="user-label">Password</label>
+                            </div>
 
-                        <div class="input-group">
-                            <input required="" type="password" name="text" autocomplete="off" class="input">
-                            <label class="user-label">Confirm Password</label>
-                        </div>
+                            <div class="input-group">
+                                <input id="hotstarUserConfirmPassword" required="" type="password" name="text" autocomplete="off" class="input">
+                                <label class="user-label">Confirm Password</label>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="age-warning">
-                        <p>By proceeding you confirm that you are above 18 years of age and agree to the <b>Privacy Policy</b> & <b>Terms of Use.</b></p>
+                        <p>By proceeding you confirm that you are above 18 years of age and agree to the <b>Privacy
+                                Policy</b> & <b>Terms of Use.</b></p>
                     </div>
 
                     <div class="submit-button">
-                        <button>Register</button>
+                        <button onclick="hotstar_register(event)">Register</button>
                     </div>
 
                     <div class="trouble">
@@ -58,5 +63,9 @@
             </div>
         </div>
     </div>
+
+
+    <script src="./hotstarregister.js"></script>
 </body>
+
 </html>

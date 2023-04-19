@@ -8,7 +8,6 @@
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
-
 <body>
     <div id="screen">
         <div class="container">
@@ -23,23 +22,26 @@
                     </div>
 
                     <div class="input-fields">
-                        <div class="input-group">
-                            <input required="" type="text" name="text" autocomplete="off" class="input">
-                            <label class="user-label">Your Email Address</label>
-                        </div>
+                        <form onsubmit="hotstar_login(event)">
+                            <div class="input-group">
+                                <input id="hotstarLoginEmail" required="" type="text" name="text" autocomplete="off" class="input">
+                                <label class="user-label">Your Email Address</label>
+                            </div>
 
-                        <div class="input-group">
-                            <input required="" type="text" name="text" autocomplete="off" class="input">
-                            <label class="user-label">Enter Password</label>
-                        </div>
+                            <div class="input-group">
+                                <input id="hotstarLoginPassword" required="" type="text" name="text" autocomplete="off" class="input">
+                                <label class="user-label">Enter Password</label>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="age-warning">
-                        <p>By proceeding you confirm that you are above 18 years of age and agree to the <b>Privacy Policy</b> & <b>Terms of Use.</b></p>
+                        <p>By proceeding you confirm that you are above 18 years of age and agree to the <b>Privacy
+                                Policy</b> & <b>Terms of Use.</b></p>
                     </div>
 
                     <div class="submit-button">
-                        <button>Submit</button>
+                        <button onclick="hotstar_login(event)">Submit</button>
                     </div>
 
                     <div class="trouble">
@@ -47,9 +49,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-</body>
 
+
+    <script src="./hotstarlogin.js"></script>
+</body>
 </html>
