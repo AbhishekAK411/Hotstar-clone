@@ -16,9 +16,9 @@
                 <!-- add subscribe button here -->
             </div>
             <div class="hotstar-icon">
-                <div class="icon">
+                <div id="current_user_switch" class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M192,96a64,64,0,1,1-64-64A64,64,0,0,1,192,96Z" opacity="0.2"/><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></svg>
-                    <p>My Space</p>
+                    <p id="remove_data">My Space</p>
                 </div>
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"/><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
@@ -466,5 +466,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        window.onload = function(){
+            var hotstar_currentUser = JSON.parse(localStorage.getItem("hotstar_current_user"));
+            
+            if(!!hotstar_currentUser){
+                var user_switch = document.getElementById("current_user_switch");
+                // console.log(user_switch);
+                const removeData = document.getElementById("remove_data");
+                removeData.remove();
+
+                var p = document.createElement("p");
+                p.innerText = hotstar_currentUser.hotUserName;
+                user_switch.append(p);
+                
+            } else {
+                alert("current user is absent");
+            }
+        }
+    </script>
 </body>
 </html>

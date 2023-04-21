@@ -28,7 +28,8 @@ function hotstar_register(event){
                     alert("Registration Successful");
                     localStorage.setItem("hotstar_users", JSON.stringify(hotstar_storage));
                 } else {
-                    alert("Email is already registered");
+                    alert("Email is already registered. Proceed to Login.");
+                    window.location.href = `./login.html`;
                 }
             } else {
                 alert("Passwords Do Not Match");
