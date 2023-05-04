@@ -10,7 +10,6 @@ window.onload = function(){
         hotData += `<div class="movie-list-image"><img src="${movie_storage[i].movie_link}" alt="" /></div>`;
         divToInsertImage.innerHTML = hotData;
     }
-    console.log(divToInsertImage);
 
     
     if(!!hotstar_currentUser){
