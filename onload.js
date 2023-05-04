@@ -1,6 +1,17 @@
 
 window.onload = function(){
     var hotstar_currentUser = JSON.parse(localStorage.getItem("hotstar_current_user"));
+
+    var movie_storage = JSON.parse(localStorage.getItem("HotstarMovieData"));
+    var hotData = "";
+    var divToInsertImage = document.getElementById("trending-movie-list1");
+
+    for(var i=0;i<movie_storage.length;i++){
+        hotData += `<div class="movie-list-image"><img src="${movie_storage[i].movie_link}" alt="" /></div>`;
+        divToInsertImage.innerHTML = hotData;
+    }
+    console.log(divToInsertImage);
+
     
     if(!!hotstar_currentUser){
         var user_switch = document.getElementById("current_user_switch");
@@ -20,7 +31,7 @@ window.onload = function(){
         console.log("current user is absent");
         var logindiv = document.getElementById("login");
         
-        var button = `    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ededed" viewBox="0 0 256 256"><path d="M136,128,96,168V88Z" opacity="0.2"></path><path d="M141.66,122.34l-40-40A8,8,0,0,0,88,88v32H24a8,8,0,0,0,0,16H88v32a8,8,0,0,0,13.66,5.66l40-40A8,8,0,0,0,141.66,122.34ZM104,148.69V107.31L124.69,128ZM208,48V208a16,16,0,0,1-16,16H136a8,8,0,0,1,0-16h56V48H136a8,8,0,0,1,0-16h56A16,16,0,0,1,208,48Z"></path></svg>
+        var button = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ededed" viewBox="0 0 256 256"><path d="M136,128,96,168V88Z" opacity="0.2"></path><path d="M141.66,122.34l-40-40A8,8,0,0,0,88,88v32H24a8,8,0,0,0,0,16H88v32a8,8,0,0,0,13.66,5.66l40-40A8,8,0,0,0,141.66,122.34ZM104,148.69V107.31L124.69,128ZM208,48V208a16,16,0,0,1-16,16H136a8,8,0,0,1,0-16h56V48H136a8,8,0,0,1,0-16h56A16,16,0,0,1,208,48Z"></path></svg>
         <button class="login_class" onclick="login()">
             <p>Login</p>
         </button>`;
