@@ -7,11 +7,10 @@ window.onload = function(){
     var divToInsertImage = document.getElementById("trending-movie-list1");
 
     for(var i=0;i<movie_storage.length;i++){
-        hotData += `<div class="movie-list-image"><img src="${movie_storage[i].movie_link}" alt="" /></div>`;
+        hotData += `<div onclick='hotstar_redirect(${JSON.stringify(movie_storage[i])})' class="movie-list-image"><img src="${movie_storage[i].movie_link}" alt="" /></div>`;
         divToInsertImage.innerHTML = hotData;
     }
 
-    
     if(!!hotstar_currentUser){
         var user_switch = document.getElementById("current_user_switch");
         var logoutDiv = document.getElementById("logout");
@@ -36,6 +35,13 @@ window.onload = function(){
         </button>`;
         logindiv.innerHTML = button;
     }
+}
+
+function hotstar_redirect(hotstar_product){
+    var hotstar_singleProduct = JSON.stringify(hotstar_product);
+    
+    localStorage.setItem("current-product", hotstar_singleProduct);
+    window.location.href = `./singleproduct.html`;
 }
 
 function logout(){
