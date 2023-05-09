@@ -71,6 +71,7 @@
                     <button>Watch Now</button>
                     <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></button>
                 </div>
+                <div id="replace-cart" class="cart-button"></div>
             </div>
             <div class="slider-image">
                 <div class="inner-slider">
@@ -236,6 +237,28 @@
 
             var divToAppendImage = document.querySelector('.show-image');
             divToAppendImage.style.backgroundImage = `url(${hotstar_currentProduct.movie_link})`;
+
+
+            var divToAddCart = document.getElementById("replace-cart");
+            var cartStructure = `<button onclick='addToCart(${JSON.stringify(hotstar_currentProduct)})'>Add To Cart</button>`;
+            divToAddCart.innerHTML = cartStructure;
+        }
+
+        function addToCart(product){
+            var hotstar_currentUser = JSON.parse(localStorage.getItem("hotstar_current_user"));
+            var hotstar_userData = JSON.parse(localStorage.getItem("hotstar_users"));
+
+            for(var i=0;i<hotstar_userData.length;i++){
+                if(hotstar_currentUser.hotUserEmail == hotstar_userData[i].hotUserEmail){
+                    if(hotstar_userData[i].cartProducts == undefined){
+                        hotstar_userData[i].cartProducts = [product];
+                    } else {
+                        hotstar_userData[i].cartProducts.push(product);
+                    }
+                    alert("Product added to cart");
+                }
+            }
+            localStorage.setItem("hotstar_users", JSON.stringify(hotstar_userData));
         }
     </script>
 </body>
