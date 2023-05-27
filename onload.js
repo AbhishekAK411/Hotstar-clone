@@ -53,3 +53,7 @@ function logout(){
 function login(){
     window.location.href = `./login.html`;
 }
+
+function redirectToCart(){
+    window.location.href = `./cart.html`;
+}

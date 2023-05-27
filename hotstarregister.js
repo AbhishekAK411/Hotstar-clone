@@ -27,6 +27,7 @@ function hotstar_register(event){
                     hotstar_storage.push(hotstar_data);
                     alert("Registration Successful");
                     localStorage.setItem("hotstar_users", JSON.stringify(hotstar_storage));
+                    window.location.href = `./login.html`;
                 } else {
                     alert("Email is already registered. Proceed to Login.");
                     window.location.href = `./login.html`;
@@ -40,4 +41,9 @@ function hotstar_register(event){
     } else {
         alert("All Fields are Mandatory.");
     }
+}
+
+
+function redirectToRegister(){
+    window.location.href = `./register.html`;
 }

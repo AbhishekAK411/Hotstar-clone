@@ -44,8 +44,8 @@
                         <button onclick="hotstar_login(event)">Submit</button>
                     </div>
 
-                    <div class="trouble">
-                        <p>Having trouble logging in? <b>Get Help</b></p>
+                    <div onclick="redirectToRegister()" class="trouble">
+                        <p>Don't have an account? <b>Register here</b></p>
                     </div>
                 </div>
             </div>
@@ -54,5 +54,12 @@
 
 
     <script src="./hotstarlogin.js"></script>
+    <script>
+
+        function redirectToRegister(){
+            window.location.href = `./register.html`;
+        }
+
+    </script>
 </body>
 </html>
