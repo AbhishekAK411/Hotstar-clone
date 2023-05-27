@@ -152,7 +152,7 @@
                           </div>
                     </div>
                     <div class="proceed-button">
-                        <button>CHECKOUT</button>
+                        <button onclick="redirectToHome()">CHECKOUT</button>
                     </div>
                 </div>
             </div>
@@ -202,6 +202,10 @@
 
             divToAppendProduct.innerHTML = finalData;
 
+        }
+
+        function redirectToHome(){
+            window.location.href = `./home.html`;
         }
 
 
